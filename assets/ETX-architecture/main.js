@@ -97,6 +97,26 @@ document.getElementById('language-toggle').addEventListener('click', function() 
     }
 });
 
+/*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form'),
+contactMessage = document.getElementById('contact-message')
+
+const sendEmail = (e) =>{
+e.preventDefault()
+
+emailjs.sendForm('service_d40481b', 'template_dcpq7hd', '#contact-form', '63hhzmg0WOb4hsyug')
+
+  .then(() =>{
+    contactMessage.textContent = 'Message Sent ✅'
+    alert("Thank you for contacting Home Swift ! We will review the information provided and we will get back to you shortly !");
+  }, () =>{
+    contactMessage.textContent = 'Message not sent (service error) ❌'
+    alert("Message not sent succesfully (service error)");
+  })
+}
+
+contactForm.addEventListener('submit', sendEmail)
+
 
 /*=============== SCROLL REVEAL JS ===============*/
 const sr = ScrollReveal({

@@ -366,32 +366,34 @@
                     <div class="form__group">
                         <label for="contact-name" class="english-text">Name</label>
                         <label for="contact-name" class="spanish-text">Nombre</label>
-                        <input type="text" class="form__text" required id="contact-name">
+                        <input type="text" class="form__text" required id="contact-name" name="name">
                     </div>
             
                     <div class="form__group">
                         <label for="contact-info" class="english-text">Email or Phone number</label>
                         <label for="contact-info" class="spanish-text">Correo electrónico o número de teléfono</label>
-                        <input type="text" class="form__text" required id="contact-info">
+                        <input type="text" class="form__text" required id="contact-info" name="contact-info">
                     </div>
             
                     <div class="form__group">
                         <label for="contact-property" class="english-text">Property Address</label>
                         <label for="contact-property" class="spanish-text">Dirección de la propiedad</label>
-                        <input type="text" class="form__text" required id="contact-property">
+                        <input type="text" class="form__text" required id="contact-property" name="property-address">
                     </div>
 
                     <div class="form__group">
                         <label for="contact-property" class="english-text">Additional Info (optional)</label>
                         <label for="contact-property" class="spanish-text">información addicional (opcional)</label>
-                        <input type="text" class="form__text" id="contact-property">
+                        <input type="text" class="form__text" id="contact-property" name="additional-info">
                     </div>
             
-                    <button type="send" class="button contact-button">
+                    <button type="submit" class="button contact-button">
                         <span class="english-text">Send form</span>
                         <span class="spanish-text">Enviar formulario</span>
                         <i class="ri-send-plane-fill"></i>
                     </button>
+
+                    <div class="contact-message" id="contact-message"></div>
                 </form>
             </div>
         </section>
@@ -412,6 +414,8 @@
 
     <!-- ========================================================== -->
     <!-- =========================== JAVASCRIPT LINKS =============================== -->
+    <!--=============== EMAIL JS ===============-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- SCROLL REVEAL JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- SWIPER JS -->
